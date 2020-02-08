@@ -652,13 +652,26 @@ def tf_repositories(path_prefix = "", tf_repo_name = ""):
         name = "zlib_archive",
         build_file = clean_dep("//third_party:zlib.BUILD"),
         sha256 = "c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1",
-        strip_prefix = "zlib-1.2.11",
+        strip_prefix = "zlib-1.2.8",
         system_build_file = clean_dep("//third_party/systemlibs:zlib.BUILD"),
         urls = [
-            "https://storage.googleapis.com/mirror.tensorflow.org/zlib.net/zlib-1.2.11.tar.gz",
-            "https://zlib.net/zlib-1.2.11.tar.gz",
+            "https://storage.googleapis.com/mirror.tensorflow.org/zlib.net/zlib-1.2.8.tar.gz",
+            "https://zlib.net/zlib-1.2.8.tar.gz",
         ],
     )
+
+ #   tf_http_archive(
+ #       name = "zlib_archive",
+ #       build_file = clean_dep("//third_party:zlib.BUILD"),
+ #       sha256 = "36658cb768a54c1d4dec43c3116c27ed893e88b02ecfcb44f2166f9c0b7f2a0d",
+  #      strip_prefix = "zlib-1.2.11",
+  #      system_build_file = clean_dep("//third_party/systemlibs:zlib.BUILD"),
+  #      urls = [
+  #          "https://storage.googleapis.com/mirror.tensorflow.org/zlib.net/zlib-1.2.11.tar.gz",
+  #          "https://zlib.net/zlib-1.2.11.tar.gz",
+  #      ],
+  #  )
+
 
     tf_http_archive(
         name = "fft2d",
