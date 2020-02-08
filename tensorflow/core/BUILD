@@ -995,6 +995,9 @@ cc_library(
         ":gpu_runtime",
         ":sycl_runtime",
     ],
+    copts = [
+        "-std=c++14",
+    ],
 )
 
 # This includes implementations of all kernels built into TensorFlow.
@@ -1147,6 +1150,9 @@ cc_library(
     deps = [
         ":tensorflow_opensource",
         "//tensorflow/core/platform/default/build_config:tensorflow_platform_specific",
+    ],
+    copts = [
+        "-std=c++14",
     ],
 )
 
