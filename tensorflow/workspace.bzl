@@ -285,18 +285,39 @@ def tf_repositories(path_prefix = "", tf_repo_name = ""):
         ],
     )
 
+
+## original png version
+#    tf_http_archive(
+#        name = "png",
+#        build_file = clean_dep("//third_party:png.BUILD"),
+#        patch_file = clean_dep("//third_party:png_fix_rpi.patch"),
+#        sha256 = "ca74a0dace179a8422187671aee97dd3892b53e168627145271cad5b5ac81307",
+#        strip_prefix = "libpng-1.6.37",
+#        system_build_file = clean_dep("//third_party/systemlibs:png.BUILD"),
+#        urls = [
+#            "https://storage.googleapis.com/mirror.tensorflow.org/github.com/glennrp/libpng/archive/v1.6.37.tar.gz",
+#            "https://github.com/glennrp/libpng/archive/v1.6.37.tar.gz",
+#        ],
+#    )
+
     tf_http_archive(
         name = "png",
         build_file = clean_dep("//third_party:png.BUILD"),
-        patch_file = clean_dep("//third_party:png_fix_rpi.patch"),
-        sha256 = "ca74a0dace179a8422187671aee97dd3892b53e168627145271cad5b5ac81307",
-        strip_prefix = "libpng-1.6.37",
+        #patch_file = clean_dep("//third_party:png_fix_rpi.patch"),
+        sha256 = "e45ce5f68b1d80e2cb9a2b601605b374bdf51e1798ef1c2c2bd62131dfcf9eef",
+        strip_prefix = "libpng-1.6.34",
         system_build_file = clean_dep("//third_party/systemlibs:png.BUILD"),
         urls = [
-            "https://storage.googleapis.com/mirror.tensorflow.org/github.com/glennrp/libpng/archive/v1.6.37.tar.gz",
-            "https://github.com/glennrp/libpng/archive/v1.6.37.tar.gz",
+            "https://storage.googleapis.com/mirror.tensorflow.org/github.com/glennrp/libpng/archive/v1.6.34.tar.gz",
+            "http://github.com/glennrp/libpng/archive/v1.6.34.zip",
+            #"https://github.com/glennrp/libpng/archive/v1.6.37.tar.gz",
         ],
     )
+
+
+
+
+    
 
     tf_http_archive(
         name = "org_sqlite",
@@ -651,12 +672,14 @@ def tf_repositories(path_prefix = "", tf_repo_name = ""):
     tf_http_archive(
         name = "zlib_archive",
         build_file = clean_dep("//third_party:zlib.BUILD"),
-        sha256 = "c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1",
+        sha256 = "36658cb768a54c1d4dec43c3116c27ed893e88b02ecfcb44f2166f9c0b7f2a0d",
         strip_prefix = "zlib-1.2.8",
         system_build_file = clean_dep("//third_party/systemlibs:zlib.BUILD"),
         urls = [
             "https://storage.googleapis.com/mirror.tensorflow.org/zlib.net/zlib-1.2.8.tar.gz",
-            "https://zlib.net/zlib-1.2.8.tar.gz",
+            "http://bazel-mirror.storage.googleapis.com/zlib.net/zlib-1.2.8.tar.gz",
+            #"https://storage.googleapis.com/mirror.tensorflow.org/zlib.net/zlib-1.2.8.tar.gz",
+            #"https://zlib.net/zlib-1.2.8.tar.gz",
         ],
     )
 
