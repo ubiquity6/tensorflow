@@ -255,6 +255,7 @@ cc_library(
     name = "tf_tensor",
     srcs = ["tf_tensor.cc"],
     hdrs = ["tf_tensor.h"],
+    copts = ["-std=c++14"],
     visibility = ["//visibility:public"],
     deps = select({
         "//tensorflow:android": [
