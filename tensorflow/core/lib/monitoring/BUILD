@@ -178,6 +178,7 @@ cc_library(
 cc_library(
     name = "mobile_percentile_sampler",
     hdrs = ["mobile_percentile_sampler.h"],
+    copts = ["-std=c++14"],
     deps = [
         ":collection_registry",
         ":metric_def",
@@ -192,6 +193,7 @@ cc_library(
     name = "percentile_sampler",
     srcs = ["percentile_sampler.cc"],
     hdrs = ["percentile_sampler.h"],
+    copts = ["-std=c++14"],
     visibility = [
         "//tensorflow/c/eager:__pkg__",
         "//tensorflow/core:__pkg__",
