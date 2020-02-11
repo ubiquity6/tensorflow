@@ -804,6 +804,7 @@ cc_binary(
 tf_cuda_library(
     name = "stream_executor",
     srcs = ["stream_executor.h"],
+            copts = ["-std=c++14"],
     hdrs = [
         "cuda.h",
         "rocm.h",
@@ -820,6 +821,7 @@ tf_cuda_library(
 # and does not include any cuda dependencies.
 cc_library(
     name = "stream_executor_no_cuda",
+            copts = ["-std=c++14"],
     srcs = ["stream_executor.h"],
     hdrs = [
         "stream_executor_no_cuda.h",

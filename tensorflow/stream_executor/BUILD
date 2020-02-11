@@ -190,6 +190,7 @@ alias(
 
 cc_library(
     name = "timer",
+            copts = ["-std=c++14"],
     srcs = [
         "device_description.h",
         "kernel_cache_config.h",
