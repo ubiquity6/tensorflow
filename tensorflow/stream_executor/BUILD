@@ -100,6 +100,7 @@ cc_library(
 
 cc_library(
     name = "kernel",
+    copts = ["-std=c++14"],
     srcs = [
         "dnn.h",
         "fft.h",
@@ -316,6 +317,7 @@ cc_library(
 
 cc_library(
     name = "executor_cache",
+        copts = ["-std=c++14"],
     srcs = [
         "device_description.h",
         "device_memory.h",
@@ -474,6 +476,7 @@ cc_library(
 
 cc_library(
     name = "stream_executor_pimpl_header",
+        copts = ["-std=c++14"],
     hdrs = [
         "device_description.h",
         "dnn.h",
@@ -506,6 +509,7 @@ cc_library(
         "stream_executor_pimpl.cc",
     ],
     hdrs = ["stream_executor_pimpl.h"],
+        copts = ["-std=c++14"],
     deps = [
         ":blas",
         ":device_memory",
@@ -540,6 +544,7 @@ cc_library(
 # The stream_executor_headers target does not prescribe an implementation.
 cc_library(
     name = "stream_executor_headers",
+        copts = ["-std=c++14"],
     textual_hdrs = [
         "blas.h",
         "device_description.h",
@@ -589,6 +594,7 @@ cc_library(
 
 cc_library(
     name = "stream_executor",
+        copts = ["-std=c++14"],
     textual_hdrs = [
         "blas.h",
         "device_description.h",
