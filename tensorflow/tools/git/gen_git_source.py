@@ -35,7 +35,6 @@ import os
 import shutil
 import subprocess
 
-import six
 
 
 def parse_branch_ref(filename):
@@ -169,7 +168,7 @@ def get_git_version(git_base_path, git_tag_override):
         subprocess.check_output([
             "git",
             str("--git-dir=%s/.git" % git_base_path),
-            str("--work-tree=" + six.ensure_str(git_base_path)), "describe",
+            str("--work-tree=" + str(git_base_path)), "describe",
             "--long", "--tags"
         ]).strip())
     version_separator = b"-"
