@@ -184,7 +184,8 @@ def get_git_version(git_base_path, git_tag_override):
       val = version_separator.join(
           [bytes(git_tag_override, "utf-8"), b"0", abbrev_commit])
     return val if val else unknown_label
-  except (subprocess.CalledProcessError, OSError):
+  except Exception as e:
+    print("Unable to get git version with exception: {}".format(e))
     return unknown_label
 
 
